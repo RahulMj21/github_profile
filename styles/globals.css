@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply relative min-h-[100vh] w-[1024px] max-w-[90%] mx-auto pt-10 pb-24;
+  }
+  .home-heading {
+    @apply text-3xl text-center mb-7 tracking-[1px];
+  }
+  .input {
+    @apply outline-none border-gray-700 border bg-transparent py-2 px-4 rounded-lg;
+  }
+  .btn-brand {
+    @apply bg-purple-600 flex items-center gap-2 py-2 px-4 outline-none border-none rounded-lg hover:bg-purple-700 transition-all duration-500;
+  }
+  .user-card {
+    @apply w-[350px] max-w-[100%] mt-16 border border-gray-700 border-t-gray-800 border-r-gray-800 rounded py-8 px-6 flex flex-col gap-4 items-center rounded-[12px] bg-gradient-to-bl from-gray-900 to-gray-800 transition-all;
+  }
+  .repo-stat {
+    @apply capitalize flex flex-col items-center  text-gray-300 rounded-xl;
+  }
+  .repo-stat-number {
+    @apply text-2xl text-gray-200;
+  }
+}
