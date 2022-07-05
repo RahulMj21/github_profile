@@ -2,13 +2,7 @@ import axios from "axios";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { FormEvent, useRef, useState } from "react";
-import {
-  FaCircleNotch,
-  FaGitAlt,
-  FaGithub,
-  FaGithubAlt,
-  FaSearch,
-} from "react-icons/fa";
+import { FaCircleNotch, FaGithub, FaSearch } from "react-icons/fa";
 import Error from "../components/Error";
 import Footer from "../components/Footer";
 import UserCard from "../components/UserCard";
@@ -67,7 +61,12 @@ const Home: NextPage = () => {
                 className="input"
               />
               <button disabled={loading} type="submit" className="btn-brand">
-                Search {loading ? <FaCircleNotch /> : <FaSearch />}
+                Search{" "}
+                {loading ? (
+                  <FaCircleNotch className="animate-spin " />
+                ) : (
+                  <FaSearch />
+                )}
               </button>
             </form>
             {error ? (

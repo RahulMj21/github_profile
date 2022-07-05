@@ -16,12 +16,18 @@
     @apply bg-purple-600 flex items-center gap-2 py-2 px-4 outline-none border-none rounded-lg hover:bg-purple-700 transition-all duration-500;
   }
   .user-card {
-    @apply w-[350px] max-w-[100%] mt-16 border border-gray-700 border-t-gray-800 border-r-gray-800 rounded py-8 px-6 flex flex-col gap-4 items-center rounded-[12px] bg-gradient-to-bl from-gray-900 to-gray-800 transition-all;
+    @apply relative w-[350px] max-w-[100%] mt-16 border border-gray-700 border-t-gray-800 border-r-gray-800 pt-20 pb-8 px-6 flex flex-col gap-4 items-center rounded-[12px] bg-gradient-to-bl from-gray-900 to-gray-800 duration-500 transition-all transform hover:translate-y-[-5px] overflow-hidden;
   }
   .repo-stat {
     @apply capitalize flex flex-col items-center  text-gray-300 rounded-xl;
   }
   .repo-stat-number {
     @apply text-2xl text-gray-200;
+  }
+  .user-card-faded-icon-top {
+    @apply text-[200px] text-gray-600 absolute top-[-40px] right-[-80px] opacity-[0.09] transform rotate-[-20deg];
+  }
+  .user-card-faded-icon-bottom {
+    @apply text-[200px] text-gray-600 absolute bottom-[-20px] left-[-50px] opacity-[0.07] transform rotate-[-20deg];
   }
 }
