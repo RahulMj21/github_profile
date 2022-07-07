@@ -55,12 +55,18 @@ const Home: NextPage = () => {
             >
               <input
                 type="text"
-                required
                 ref={userNameRef}
+                required
                 placeholder="Username"
-                className="input"
+                className="input w-[200px] sm:w-[250px]"
               />
-              <button disabled={loading} type="submit" className="btn-brand">
+              <button
+                disabled={loading}
+                type="submit"
+                className={`btn-brand ${
+                  loading ? "bg-purple-400 cursor-not-allowed" : ""
+                }`}
+              >
                 Search{" "}
                 {loading ? (
                   <FaCircleNotch className="animate-spin " />
